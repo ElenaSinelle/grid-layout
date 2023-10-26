@@ -14,47 +14,70 @@ a {
   cursor: pointer;
 }
 
-/*parent grid-container styles*/
 .grid-container {
   display: grid;
-  width: 100vw;
+  max-width: 1440px;
   height: 100vh;
+  margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 15vh 1fr 25vh;
+  grid-template-rows: 15vh 1fr 20vh;
   grid-template-areas:
         "header header header"
         "main main aside"
         "footer footer footer";
 }
 
+.grid-container > * {
+  padding: 20px 40px;
+}
+
+/*header styles*/
 .header {
   grid-area: header;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: rgb(249, 226, 245);
+  align-items: center;
 }
 
+.page-title {
+  font-size: 1.3rem;
+}
+
+.header-logo {
+  width: 2.5rem;
+  height: auto;
+  justify-self: end;
+}
+
+/*main styles*/
 .main {
   grid-area: main;
-}
-
-.aside {
-  grid-area: aside;
-}
-
-.footer {
-  grid-area: footer;
+  background-color: rgba(124, 244, 249, 0.6);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
+  grid-template-rows: 2fr 3fr;
 
+}
+.main-title {
+  justify-self: center;
+  align-self: center;
+}
 .articles-container {
   display: grid;
-  height: 50%;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 50%);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
         "section-1 section-2"
         "section-3 section-3";
+  gap: 0.4rem;
+}
+
+.section {
+  background-color: rgba(249, 205, 241, 0.6);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-1 {
@@ -67,4 +90,37 @@ a {
 
 .section-3 {
   grid-area: section-3;
+}
+
+.section h3 {
+  text-align: center;
+  width: 80%;
+}
+
+/*aside styles*/
+.aside {
+  grid-area: aside;
+  background-color: rgba(176, 176, 211, 0.7);
+  text-align: center;
+}
+/*footer styles*/
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: rgba(182, 179, 214, 0.5);
+  gap: 0.4rem;
+}
+
+.footer-item {
+  background-color: rgba(174, 215, 216, 0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  width: 3.5rem;
+  height: auto;
 }
