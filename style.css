@@ -29,6 +29,8 @@ a {
 
 .header {
   grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .main {
@@ -41,4 +43,28 @@ a {
 
 .footer {
   grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.articles-container {
+  display: grid;
+  height: 50%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 50%);
+  grid-template-areas:
+        "section-1 section-2"
+        "section-3 section-3";
+}
+
+.section-1 {
+  grid-area: section-1;
+}
+
+.section-2 {
+  grid-area: section-2;
+}
+
+.section-3 {
+  grid-area: section-3;
 }
