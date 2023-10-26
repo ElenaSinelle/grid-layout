@@ -1,0 +1,15 @@
+/*general styles and normalize*/
+
+html,
+* {
+  margin: 0;
+  padding: 0;
+  font: normal normal 30px/36px 'Architects Daughter';
+  color: rgba(39, 19, 1, 0.553);
+}
+
+a {
+  text-decoration: none;
+  color: rgba(190, 97, 10, 0.553);
+  cursor: pointer;
+}
