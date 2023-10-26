@@ -13,3 +13,32 @@ a {
   color: rgba(190, 97, 10, 0.553);
   cursor: pointer;
 }
+
+/*parent grid-container styles*/
+.grid-container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15vh 1fr 25vh;
+  grid-template-areas:
+        "header header header"
+        "main main aside"
+        "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.footer {
+  grid-area: footer;
+}
