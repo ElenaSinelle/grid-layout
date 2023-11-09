@@ -1,4 +1,7 @@
 /*general styles and normalize*/
+body {
+  min-width: 320px;
+}
 
 html,
 * {
@@ -12,14 +15,6 @@ a {
   text-decoration: none;
   color: rgba(190, 97, 10, 0.553);
   cursor: pointer;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-body {
-  min-width: 320px;
 }
 
 .grid-container {
@@ -58,18 +53,12 @@ body {
   transition: all ease-in 0.5s;
 }
 
-.header-logo:hover {
-  transform: rotate(180deg);
-  cursor: pointer;
-}
-
 /*main styles*/
 .main {
   grid-area: main;
   background-color: rgba(124, 244, 249, 0.6);
   display: grid;
   grid-template-rows: 2fr 3fr;
-
 }
 
 .main-title {
@@ -98,13 +87,6 @@ body {
   padding: 0.2em;
 }
 
-.section:hover {
-  background-color: rgba(249, 205, 241, 1);
-  transform: scale(1.02);
-  cursor: pointer;
-}
-
-
 .section-1 {
   grid-area: section-1;
 }
@@ -128,6 +110,7 @@ body {
   background-color: rgba(176, 176, 211, 0.7);
   text-align: center;
 }
+
 /*footer styles*/
 .footer {
   grid-area: footer;
@@ -148,21 +131,10 @@ body {
   text-align: center;
 }
 
-.footer-item:hover {
-  background-color: rgba(174, 215, 216, 1);
-  transform: scale(1.02);
-  cursor: pointer;
-}
-
 .footer-logo {
   max-width: 3.5em;
   height: auto;
   transition: all ease-in 0.5s;
-}
-
-.footer-logo:hover {
-  transform: scale(0.8);
-  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -226,5 +198,33 @@ body {
           "section-2"
           "section-3";
     gap: 0.5em;
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .header-logo:hover {
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+
+  .section:hover {
+    background-color: rgba(249, 205, 241, 1);
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+
+  .footer-item:hover {
+    background-color: rgba(174, 215, 216, 1);
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+
+  .footer-logo:hover {
+    transform: scale(0.8);
+    cursor: pointer;
   }
 }
